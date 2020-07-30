@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href={% static 'css/main.css' %}>
+</head>
+<body>
+    <header>
+        <h1>Omne initium est dimidium</h1>
+            <div class="nav"> 
+                <a href="#" id="home">Home</a>
+                <a href="#" id="about">About</a>
+                <a href="#" id="contact">Contact</a>
+            </div>   
+    </header>
+    <section>
+        <h1>Aricles</h1>
+        <ul>
+        {% for post in object_list %}
+            <li><a href="{% url 'article_detail' post.pk %}">{{ post.title }}</a> - {{ post.author }}<br>
+            {{ post.body }}</li>
+        {% endfor %}
+        </ul>            
+    </section>
+</body>
+</html>
