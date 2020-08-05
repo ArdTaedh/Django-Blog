@@ -3,14 +3,11 @@ from django.views.generic import ListView, DetailView
 from .models import Post
 
 
-    #def main(request):
-    #   return render(request, 'blog/index.html')
+def about(request):
+    return render(request, 'blog/about.html')
 
-    #def about(request):
-    #    return render(request, 'blog/about.html')
-
-    #def contact(request):
-    #    return render(request, 'blog/contact.html')
+def contact(request):
+    return render(request, 'blog/contact.html')
 
 
 class HomeView(ListView):

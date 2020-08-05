@@ -45,3 +45,23 @@ section h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
 }
+
+section ul {
+  list-style: none;
+}
+
+section ul a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 18px;
+}
+
+section span {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section .title {
+  padding: 5px 0 5px;
+}

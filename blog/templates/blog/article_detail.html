@@ -11,17 +11,17 @@
     <header>
         <h1>Omne initium est dimidium</h1>
             <div class="nav"> 
-                <a href="#" id="home">Home</a>
-                <a href="#" id="about">About</a>
-                <a href="#" id="contact">Contact</a>
+                <a href="{% url 'index' %}" id="home">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>   
     </header>
     <section>
-        <h1>Aricles</h1>
-        <h1>{{ post.title }}</h1>          
-        <small>By: {{ post.author }}</small><br>
-        <hr>
-        {{ post.body }}
+            <h1>Aricles</h1>
+            <h1>{{ post.title }}</h1>          
+            <h3 class="by">By: <span class="author">{{ post.author }}</span></h3>
+            <hr>
+            <p>{{ post.body }}</p>
     </section>
 </body>
 </html>
