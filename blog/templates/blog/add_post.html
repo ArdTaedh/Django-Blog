@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href={% static 'css/article.css' %}>
+    <title>Create a Post</title>
+    <link rel="stylesheet" href={% static 'css/addpost.css' %}>
 </head>
 <body>
     <header>
@@ -18,11 +18,14 @@
             </div>   
     </header>
     <section>
-            <h1>Aricles</h1>
-            <h1>{{ post.title }}</h1>          
-            <h3 class="by">By: <span class="author">{{ post.author }}</span></h3>
-            <hr>
-            <p>{{ post.body }}</p>
+        <h1>Add Blog Post</h1>
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Post</button>
+            </form>
+        </div>
     </section>
 </body>
 </html>

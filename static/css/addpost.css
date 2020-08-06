@@ -23,14 +23,17 @@ header .nav a{
   font-size: 25px;
 }
 
+
+header .nav {
+  float: right;
+}
+
 header .nav a:hover {
   color: red;
 }
 
-
-
-header .nav {
-  float: right;
+header .nav a #about:active {
+  color: red;
 }
 
 section {
@@ -43,8 +46,30 @@ section h1 {
   color: red;
 }
 
-section p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  padding: 5px 0;
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 0 20px 20px;
 }
