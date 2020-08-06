@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Post</title>
-    <link rel="stylesheet" href={% static 'css/addpost.css' %}>
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'css/update.css' %}>
 </head>
 <body>
     <header>
@@ -15,15 +15,15 @@
                 <a href="{% url 'add_post' %}">Create a post</a>
             </div>   
     </header>
-    <section>
-        <h1>Add Blog Post</h1>
-        <div class="container">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button>Post</button>
-            </form>
-        </div>
-    </section>
+        <section>
+            <h1>Update Post..</h1>
+                <div class="container">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button>Post</button>
+                    </form>
+                </div>
+        </section>
 </body>
 </html>

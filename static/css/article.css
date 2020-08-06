@@ -15,6 +15,10 @@ header h1 {
   font-size: 45px;
 }
 
+header h1:hover {
+  color: black;
+}
+
 header .nav a{
   text-decoration: none;
   padding: 14px 16px;
@@ -41,6 +45,7 @@ section {
 section h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
+  margin-left: 20px;
 }
 
 section span{
@@ -49,10 +54,12 @@ section span{
 
 section .by {
   padding: 0 0 5px;
+  margin-left: 20px;
 }
 
 section p {
   padding: 10px 0;
   font-size: 20px;
+  margin-left: 20px;
 }
 

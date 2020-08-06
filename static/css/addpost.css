@@ -15,6 +15,10 @@ header h1 {
   font-size: 45px;
 }
 
+header h1:hover {
+  color: black;
+}
+
 header .nav a{
   text-decoration: none;
   padding: 14px 16px;
@@ -44,6 +48,7 @@ section {
 section h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
+  margin-left: 20px;
 }
 
 input[type=text], select, textarea{
@@ -53,10 +58,12 @@ input[type=text], select, textarea{
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 label {
   padding: 12px 12px 12px 0;
+  font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
 }
 
@@ -67,6 +74,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .container {
