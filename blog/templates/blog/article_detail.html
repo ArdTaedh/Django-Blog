@@ -16,10 +16,14 @@
             </div>   
     </header>
     <section>
-            <h1>Aricles</h1>
+            <h1>Aricles</h1>          
             <h1>{{ post.title }}</h1>          
-            <h3 class="by">By: <span class="author">{{ post.author }}</span></h3>
-            <hr>
+            <h3 class="by">By: <span class="author">{{ post.author }}</span></h3> 
+            <div class="links">
+                <a href="{% url 'update_post' post.pk %}">Edit</a>
+                <a href="{% url 'delete_post' post.pk %}">Delete</a>
+            </div>    
+            <hr class="line">
             <p>{{ post.body }}</p>
     </section>
 </body>

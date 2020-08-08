@@ -59,8 +59,7 @@ section ul {
 section ul a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 18px;
+  
 }
 
 section span {
@@ -69,5 +68,7 @@ section span {
 }
 
 section .title {
-  padding: 5px 0 5px;
+  padding: 5px 0 10px;
 }
+
+

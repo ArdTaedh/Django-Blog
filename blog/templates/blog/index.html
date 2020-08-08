@@ -20,7 +20,13 @@
         <ul>
         {% for post in object_list %}
         <li class="title"><a href="{% url 'article_detail' post.pk %}"> {{ post.title }}</a> - 
-            <span>{{ post.author }}</span> - <a href="{% url 'update_post' post.pk %}">Edit</a>
+            <span>{{ post.author }}</span> - 
+            
+                <a href="{% url 'update_post' post.pk %}">Edit</a>
+
+                <a href="{% url 'delete_post' post.pk %}">Delete</a>
+           
+
             <br>
         </li>
         {% endfor %}

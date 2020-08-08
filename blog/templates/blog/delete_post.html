@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Post</title>
-    <link rel="stylesheet" href={% static 'css/update.css' %}>
+    <title>Delete Post</title>
+    <link rel="stylesheet" href={% static 'css/delete.css' %}>
 </head>
 <body>
     <header>
@@ -16,12 +16,13 @@
             </div>   
     </header>
         <section>
-            <h1>Update Post..</h1>
+            <h1>Delete Post..</h1>
+            <h3>Delete: <span>{{ post.title }}</span></h3>
                 <div class="container">
                     <form method="POST">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <button>Update</button>
+                        <h2>Are you sure?</h2>
+                        <button>Delete</button>
                     </form>
                 </div>
         </section>
