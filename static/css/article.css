@@ -65,7 +65,7 @@ section p {
 }
 
 section .links {
-  margin: 0 20px;
+  margin: 7px 20px;
 }
 
 section .links a{
@@ -73,8 +73,19 @@ section .links a{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .line {
   margin: 5px 20px 0 ;
 }
 
+.edit {
+  padding: 0 15px 0 0;
+}
+
+.title {
+  color: blue;
+}
+
+section .date {
+  font-size: 18px;
+  margin-left: 20px;
+}
