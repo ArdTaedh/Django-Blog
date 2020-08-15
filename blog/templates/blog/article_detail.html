@@ -11,21 +11,30 @@
     <header>
         <h1>Omne initium est dimidium</h1>
             <div class="nav"> 
-                <a href="{% url 'index' %}" id="home">Home</a>
-                <a href="{% url 'add_post' %}">Сreate a post</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'add_post' %}">Create a post</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                
+                {% else %}
                 <a href="{% url 'register' %}">Register</a>
                 <a href="{% url 'login' %}">Login</a>
-            </div>   
+                
+                {% endif %} 
+                <a href="{% url 'index' %}" id="home">Home</a>
+            </div>    
     </header>
     <section>
+    
             <h1>Aricles</h1>          
             <h1 class="title">{{ post.title }}</h1>          
             <h3 class="by">By: <span class="author">{{ post.author }}</span></h3> 
             <small class="date">{{ post.post_date }}</small> 
+            {% if user.is_authenticated %}
             <div class="links">
                 <a class="edit" href="{% url 'update_post' post.pk %}">Edit</a>
                 <a class="delete" href="{% url 'delete_post' post.pk %}">Delete</a>
             </div>    
+            {% endif %}
             <hr class="line">
             <p>{{ post.body }}</p>
     </section>

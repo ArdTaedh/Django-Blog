@@ -11,10 +11,16 @@
     <header>
         <h1>Omne initium est dimidium</h1>
             <div class="nav"> 
-                <a href="{% url 'index' %}" id="home">Home</a>
+                {% if user.is_authenticated %}
                 <a href="{% url 'add_post' %}">Create a post</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                
+                {% else %}
                 <a href="{% url 'register' %}">Register</a>
                 <a href="{% url 'login' %}">Login</a>
+                
+                {% endif %} 
+                <a href="{% url 'index' %}" id="home">Home</a>           
             </div>   
     </header>
     <section>
@@ -23,11 +29,11 @@
         {% for post in object_list %}
         <li class="title"><a href="{% url 'article_detail' post.pk %}"> {{ post.title }}</a> - 
             <span class="author">{{ post.author }}</span> - <small class="date">{{ post.post_date }}</small> 
-            
-                <a class="edit" href="{% url 'update_post' post.pk %}">Edit</a>
+                {% if user.is_authenticated %}
+                    <a class="edit" href="{% url 'update_post' post.pk %}">Edit</a>
 
-                <a class="delete" href="{% url 'delete_post' post.pk %}">Delete</a>
-           
+                    <a class="delete" href="{% url 'delete_post' post.pk %}">Delete</a>
+                {% endif %}
 
             <br>
         </li>
